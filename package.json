@@ -1,0 +1,22 @@
+{
+  "name": "marinamokhlesart",
+  "version": "1.0.0",
+  "description": "marina mokhles art website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abanoubMokhles/marinamokhlesart.git"
+  },
+  "author": "Abanoub Mokhles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abanoubMokhles/marinamokhlesart/issues"
+  },
+  "homepage": "https://github.com/abanoubMokhles/marinamokhlesart#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
