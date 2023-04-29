@@ -1,0 +1,52 @@
+:root {
+  --color-primary: #c29e5b;
+  --color-primary-tint: #ede2ce;
+  --color-primary-shade: #3a2f1b;
+  --color-accent: #61a48a;
+  --color-accent-tint: #d0e4dc;
+  --color-accent-shade: #1d3129;
+  --color-dark: #0a100e;
+  --col-width: 14rem; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  color: var(--color-dark); }
+
+img {
+  width: 100%; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf"); }
+
+@font-face {
+  font-family: "Sacramento";
+  src: url("fonts/Sacramento-Regular.ttf"); }
+
+h1,
+h2 {
+  font-family: "Sacramento", cursive; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-weight: 400; }
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(14rem, 1fr)) minmax(6rem, 1fr); }
+
+header,
+main,
+footer {
+  grid-column: 2 / span 8; }

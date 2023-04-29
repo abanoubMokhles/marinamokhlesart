@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Sacramento";
+  src: url("fonts/Sacramento-Regular.ttf");
+}
+h1,
+h2 {
+  font-family: "Sacramento", cursive;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}

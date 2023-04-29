@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "marina mokhles art website",
   "main": "index.html",
+  "source": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w",
+    "liveServer": "live-server",
+    "livePreview": "npm-run-all --parallel compile:sass liveServer",
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +22,8 @@
   },
   "homepage": "https://github.com/abanoubMokhles/marinamokhlesart#readme",
   "devDependencies": {
-    "node-sass": "^8.0.0"
+    "node-sass": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.8.3"
   }
 }
