@@ -1,7 +1,13 @@
 .grid {
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(14rem, 1fr)) minmax(
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(
       6rem,
       1fr
     );
+  grid-gap: 2rem;
+}
+header,
+main,
+footer {
+  grid-column: 2 / 10;
 }

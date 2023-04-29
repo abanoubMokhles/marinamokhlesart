@@ -37,6 +37,10 @@ h1,
 h2 {
   font-family: "Sacramento", cursive; }
 
+h1 {
+  font-size: 10rem;
+  color: var(--color-primary-shade); }
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1;
@@ -44,9 +48,47 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(14rem, 1fr)) minmax(6rem, 1fr); }
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+  grid-gap: 2rem; }
 
 header,
 main,
 footer {
-  grid-column: 2 / span 8; }
+  grid-column: 2 / 10; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; }
+  @supports (gap: 2rem) {
+    .header {
+      gap: 2rem;
+      margin-bottom: 0; } }
+  .header__logo {
+    width: auto;
+    height: 15rem; }
+  .header__navigation {
+    margin-bottom: 10rem; }
+  .header__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header__list:not(:last-child) {
+      margin-right: 2rem; }
+    @supports (gap: 2rem) {
+      .header__list {
+        gap: 2rem; }
+        .header__list:not(:last-child) {
+          margin-right: 0; } }
+  .header__image-box {
+    width: 30%; }
+  .header__link {
+    display: inline-block;
+    padding: 1rem 1.6rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: capitalize; }

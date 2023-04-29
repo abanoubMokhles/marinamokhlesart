@@ -1,5 +1,52 @@
-header,
-main,
-footer {
-  grid-column: 2 / span 8;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @supports (gap: 2rem) {
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+  // &__logo-box {
+  // }
+  &__logo {
+    width: auto;
+    height: 15rem;
+  }
+
+  &__navigation {
+    margin-bottom: 10rem;
+  }
+  &__list {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    @supports (gap: 2rem) {
+      gap: 2rem;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__image-box {
+    width: 30%;
+  }
+  &__link {
+    display: inline-block;
+    padding: 1rem 1.6rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
 }

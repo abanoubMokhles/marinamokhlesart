@@ -16,25 +16,33 @@
   <body>
     <div class="grid">
       <!-- Header -->
-      <header role="banner">
-        <div class="logo-box">
+      <header role="banner" class="header">
+        <div class="header__logo-box">
           <img
             src="img/logo-512.png"
             alt="marina mokhles logo image"
-            class="logo"
+            class="header__logo"
           />
         </div>
-        <nav role="navigation">
-          <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Message Me</a></li>
+        <nav role="navigation" class="header__navigation">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a class="header__link" href="#">About Me</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__link" href="#">Contact</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__link" href="#">Portfolio</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__link" href="#">Message Me</a>
+            </li>
           </ul>
         </nav>
 
-        <div class="header-box">
-          <h1>Marina Mokhles</h1>
+        <h1>Marina Mokhles</h1>
+        <div class="header__image-box">
           <img src="img/header.jpg" alt="a silent nature drawing" />
         </div>
       </header>
