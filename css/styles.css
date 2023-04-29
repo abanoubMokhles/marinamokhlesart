@@ -5,6 +5,7 @@
   --color-accent: #61a48a;
   --color-accent-tint: #d0e4dc;
   --color-accent-shade: #1d3129;
+  --color-light: #fff;
   --color-dark: #0a100e;
   --col-width: 14rem; }
 
@@ -20,7 +21,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  color: var(--color-dark); }
+  color: var(--color-accent-shade); }
 
 img {
   width: 100%; }
@@ -41,10 +42,58 @@ h1 {
   font-size: 10rem;
   color: var(--color-primary-shade); }
 
+h2 {
+  font-size: 6.4rem;
+  margin-bottom: 1.6rem;
+  color: var(--color-primary-shade); }
+
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 3.2rem; }
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-weight: 400; }
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+
+.btn--lg {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.7rem; }
+
+.btn--main {
+  color: var(--color-light);
+  background-color: var(--color-accent); }
+
+.btn:hover, .btn:active {
+  color: var(--color-light);
+  background-color: var(--color-accent-shade); }
+
+.composition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  .composition__image {
+    width: 100%;
+    display: block;
+    height: 100%; }
+  .composition__image-box {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 1.6rem rgba(0, 0, 0, 0.2); }
+    .composition__image-box--1 {
+      transform: translateY(0); }
+    .composition__image-box--2 {
+      transform: translateY(3rem) translateX(-3rem); }
+    .composition__image-box--3 {
+      transform: translateY(6rem) translateX(-6rem); }
 
 .grid {
   display: grid;
@@ -57,15 +106,14 @@ footer {
   grid-column: 2 / 10; }
 
 .header {
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem; }
+  align-items: center; }
   @supports (gap: 2rem) {
     .header {
-      gap: 2rem;
-      margin-bottom: 0; } }
+      gap: 2rem; } }
   .header__logo {
     width: auto;
     height: 15rem; }
@@ -92,3 +140,9 @@ footer {
     font-size: 2rem;
     text-decoration: none;
     text-transform: capitalize; }
+
+.section-aboutme {
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem; }
