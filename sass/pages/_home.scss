@@ -54,6 +54,20 @@
 .section-aboutme {
   padding: 8rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 6rem;
+}
+
+.section-how-it-works {
+  padding: 8rem 0;
+}
+.section-slider {
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 6rem;
+  align-items: center;
+}
+.section-gallery {
+  padding: 8rem 0;
 }

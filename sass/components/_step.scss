@@ -1,0 +1,23 @@
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 6rem;
+  text-align: center;
+}
+.step {
+  &__icon {
+    height: 8rem;
+    width: 8rem;
+    margin-bottom: 3.2rem;
+    fill: var(--color-primary);
+  }
+  &__heading {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+    color: var(--color-primary-shade);
+    text-transform: capitalize;
+  }
+  &__text {
+    font-size: 2rem;
+  }
+}
