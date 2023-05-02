@@ -88,20 +88,14 @@
 
     &:hover {
       cursor: pointer;
-      & .header__btn-dash::before {
-        transform: translateY(3px);
-      }
-      & .header__btn-dash::after {
-        transform: translateY(-3px);
-      }
     }
 
-    @include respond(tabletLandscape) {
+    @include respond(tabletPortrait) {
       display: inline-block;
     }
   }
   &__btn-dash {
-    width: 30px;
+    width: 25px;
     height: 3px;
     background-color: var(--color-primary);
     position: relative;
@@ -110,7 +104,7 @@
     &::before {
       content: "";
       display: inline-block;
-      width: 30px;
+      width: 25px;
       height: 3px;
       background-color: var(--color-primary);
     }
@@ -132,7 +126,7 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2rem;
 
-    @include respond(tabletLandscape) {
+    @include respond(tabletPortrait) {
       display: none;
     }
   }
@@ -167,10 +161,10 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 6rem;
 
-  @include respond(desktop) {
+  @include respond(tabletLandscape) {
     grid-template-columns: 2fr 3fr;
   }
-  @include respond(tabletLandscape) {
+  @include respond(tabletPortrait) {
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
     row-gap: 6rem;
@@ -187,6 +181,16 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 6rem;
   align-items: center;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+  }
+}
+.slider-text {
+  @include respond(phone) {
+    order: -1;
+  }
 }
 .section-gallery {
   padding: 16rem 0;
@@ -199,6 +203,13 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @include respond(tabletPortrait) {
+    grid-template-columns: 2fr 1fr;
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
 }
 .contact__text {
   padding: 3rem;
@@ -211,6 +222,11 @@
     ),
     url(../img/contact.jpg) 50% 31% / cover;
   height: 100%;
+
+  @include respond(phone) {
+    height: 25rem;
+    order: -1;
+  }
 }
 
 .footer {
@@ -225,6 +241,10 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+
+    @include respond(phone) {
+      gap: 6rem;
+    }
   }
   &__link {
     display: inline-block;
@@ -238,6 +258,11 @@
     &:hover,
     &:active {
       fill: var(--color-primary-shade);
+    }
+
+    @include respond(phone) {
+      height: 3rem;
+      width: 3rem;
     }
   }
   &__copyright {

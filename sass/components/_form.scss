@@ -13,6 +13,10 @@
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 
+    @include respond(phone) {
+      width: 95%;
+    }
+
     &:focus,
     &:active {
       outline: none;

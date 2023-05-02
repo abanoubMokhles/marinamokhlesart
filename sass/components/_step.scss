@@ -3,6 +3,12 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   column-gap: 6rem;
   text-align: center;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    grid-gap: 6rem;
+  }
 }
 .step {
   &__icon {

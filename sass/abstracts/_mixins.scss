@@ -1,18 +1,24 @@
 @mixin respond($device) {
   @if $device == desktop {
+    @media only screen and (min-width: 75.1em) {
+      // >= 1200px
+      @content;
+    }
+  }
+  @if $device == tabletLandscape {
     @media only screen and (max-width: 75em) {
       // <= 1200px
       @content;
     }
   }
-  @if $device == tabletLandscape {
+  @if $device == tabletPortrait {
     @media only screen and (max-width: 56.25em) {
       // <= 900px
       @content;
     }
   }
 
-  @if $device == tabletPortrait {
+  @if $device == phone {
     @media only screen and (max-width: 37.5em) {
       // <= 600px
       @content;
