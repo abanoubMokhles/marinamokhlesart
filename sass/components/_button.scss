@@ -15,12 +15,34 @@
   }
   &--main {
     color: var(--color-light);
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
+
+    &:hover,
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-primary-shade);
+    }
+  }
+  &--light {
+    color: var(--color-primary-shade);
+    background-color: var(--color-primary-tint);
+
+    &:hover,
+    &:active {
+      color: var(--color-primary-tint);
+      background-color: var(--color-primary-shade);
+    }
   }
 
-  &:hover,
-  &:active {
-    color: var(--color-light);
-    background-color: var(--color-accent-shade);
+  &:hover {
+    cursor: pointer;
   }
+}
+
+button {
+  border: none;
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }

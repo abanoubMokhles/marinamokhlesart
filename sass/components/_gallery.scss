@@ -1,11 +1,8 @@
 .gallery {
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-columns: repeat(8, 1fr);
-  // grid-template-rows: repeat(6, 10rem);
   grid-template-rows: repeat(4, 10rem);
   gap: 2rem;
-  backface-visibility: hidden;
 
   &__item {
     width: 100%;

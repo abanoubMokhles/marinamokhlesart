@@ -1,0 +1,24 @@
+@keyframes scaleHeaderImage {
+  0% {
+    width: 30%;
+    border-radius: 0;
+    height: 40rem;
+  }
+  100% {
+    width: 100%;
+    border-radius: 1.5rem;
+    height: 40rem;
+    overflow: hidden;
+  }
+}
+
+@keyframes animateHeading {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem) scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

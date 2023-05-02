@@ -5,6 +5,17 @@
       1fr
     );
   grid-gap: 2rem;
+
+  @include respond(tabletLandscape) {
+    grid-template-columns:
+      minmax(4rem, 1fr) repeat(8, minmax(min-content, 14rem))
+      minmax(4rem, 1fr);
+  }
+  @include respond(tabletPortrait) {
+    grid-template-columns:
+      minmax(2rem, 1fr) repeat(8, minmax(min-content, 14rem))
+      minmax(2rem, 1fr);
+  }
 }
 header,
 main,
