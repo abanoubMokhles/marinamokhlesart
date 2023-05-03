@@ -31,16 +31,16 @@
           </button>
           <ul class="header__list">
             <li class="header__list-item">
-              <a class="header__link" href="#">About Me</a>
+              <a class="header__link" href="#about">About Me</a>
             </li>
             <li class="header__list-item">
-              <a class="header__link" href="#">Contact</a>
+              <a class="header__link" href="#contact">Contact</a>
             </li>
             <li class="header__list-item">
-              <a class="header__link" href="#">Portfolio</a>
+              <a class="header__link" href="#portfolio">Portfolio</a>
             </li>
             <li class="header__list-item">
-              <a class="header__link" href="#">Message Me</a>
+              <a class="header__link" href="#messageMe">Message Me</a>
             </li>
           </ul>
         </nav>
@@ -57,7 +57,7 @@
 
       <!-- About Me -->
       <main role="main">
-        <section class="section-aboutme">
+        <section class="section-aboutme" id="about">
           <div>
             <h2>About me</h2>
             <p>
@@ -141,7 +141,7 @@
         </section>
 
         <!-- Gallery -->
-        <section class="section-gallery">
+        <section class="section-gallery" id="portfolio">
           <div class="gallery">
             <div class="gallery__item gallery__item--1">
               <img
@@ -231,7 +231,7 @@
         </section>
 
         <!-- Contact me -->
-        <section class="section-contact">
+        <section class="section-contact" id="messageMe">
           <div class="contact__text">
             <h2 class="heading-secondary--light">Let's get in touch</h2>
             <form
@@ -280,7 +280,7 @@
       </main>
 
       <!-- Contact info -->
-      <footer role="contentinfo" class="footer">
+      <footer role="contentinfo" class="footer" id="contact">
         <ul class="footer__list">
           <li>
             <a href="#" class="footer__link">
@@ -312,10 +312,20 @@
       </footer>
     </div>
     <script>
+      // toggle navigation
       const nav = document.querySelector("#navigation");
       const btn = document.querySelector("#navigation-btn");
       btn.addEventListener("click", (evt) => {
         nav.classList.toggle("active");
+      });
+
+      // Implement smooth scrolling
+      nav.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        const link = evt.target.closest(".header__link");
+        if (!evt) return;
+        const targetSection = document.querySelector(link.getAttribute("href"));
+        targetSection.scrollIntoView({ behavior: "smooth" });
       });
     </script>
   </body>
