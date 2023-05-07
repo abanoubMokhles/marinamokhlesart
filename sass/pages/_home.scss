@@ -130,14 +130,8 @@
       display: none;
     }
   }
-  &__image-box {
-    width: 30%;
-    height: 40rem;
-    animation: scaleHeaderImage 1s ease-out 3s forwards;
-  }
   &__image {
-    object-fit: cover;
-    height: 100%;
+    width: 40%;
   }
   &__link {
     display: inline-block;
@@ -150,6 +144,17 @@
 
     &:hover {
       color: var(--color-primary-shade);
+    }
+  }
+
+  &__hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+
+    @include respond(tabletPortrait) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

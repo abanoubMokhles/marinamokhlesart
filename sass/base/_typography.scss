@@ -11,12 +11,19 @@ h2 {
   font-family: "Sacramento", cursive;
 }
 h1 {
-  font-size: 10rem;
+  font-size: 6.8rem;
   color: var(--color-primary-shade);
-  animation: animateHeading 1s ease-out 3s backwards;
+  align-self: center;
 
   @include respond(phone) {
     font-size: 6rem;
+  }
+}
+h1 span {
+  display: block;
+
+  @include respond(tabletPortrait) {
+    display: inline;
   }
 }
 h2 {
