@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon" href="img/logo-180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="grid">
@@ -48,7 +49,7 @@
         <div class="header__hero">
           <h1><span>Hello,</span>I'm Marina Mokhles</h1>
           <img
-            src="img/header.jpg"
+            src="img/header.webp"
             alt="a silent nature drawing"
             class="header__image"
           />
@@ -73,23 +74,26 @@
           <div class="composition">
             <div class="composition__image-box composition__image-box--1">
               <img
-                src="img/step1.jpeg"
+                src="img/step1-small.webp"
+                data-src="img/step1.webp"
                 alt="composition image 1"
-                class="composition__image"
+                class="composition__image lazy-image"
               />
             </div>
             <div class="composition__image-box composition__image-box--2">
               <img
-                src="img/step2.jpeg"
+                src="img/step2-small.webp"
+                data-src="img/step2.webp"
                 alt="composition image 2"
-                class="composition__image"
+                class="composition__image lazy-image"
               />
             </div>
             <div class="composition__image-box composition__image-box--3">
               <img
-                src="img/step3.jpeg"
+                src="img/step3-small.webp"
+                data-src="img/step3.webp"
                 alt="composition image 3"
-                class="composition__image"
+                class="composition__image lazy-image"
               />
             </div>
           </div>
@@ -131,7 +135,29 @@
         <!-- Slider -->
         <section class="section-slider">
           <div class="slider">
-            <img src="img/slide1.jpg" alt="slider temp image" />
+            <div class="slider__slides">
+              <div class="slider__slide">
+                <img
+                  src="img/slide1-small.webp"
+                  data-src="img/slide1.webp"
+                  alt="slider temp image"
+                  class="slider__image lazy-image"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="img/slide2-small.webp"
+                  data-src="img/slide2.webp"
+                  alt="slider temp image"
+                  class="slider__image lazy-image"
+                />
+              </div>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__btn slide__btn--left">&larr;</button>
+              <button class="slider__btn slide__btn--right">&rarr;</button>
+            </div>
+            <div class="slider__dots"></div>
           </div>
           <div class="slider-text">
             <h2>Draw your beloved ones</h2>
@@ -147,84 +173,84 @@
           <div class="gallery">
             <div class="gallery__item gallery__item--1">
               <img
-                src="img/1.jpg"
+                src="img/1.webp"
                 alt="gallery image 1"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--2">
               <img
-                src="img/8.jpg"
+                src="img/8.webp"
                 alt="gallery image 2"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--3">
               <img
-                src="img/3.jpg"
+                src="img/3.webp"
                 alt="gallery image 3"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--4">
               <img
-                src="img/4.jpg"
+                src="img/4.webp"
                 alt="gallery image 4"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--5">
               <img
-                src="img/5.jpeg"
+                src="img/5.webp"
                 alt="gallery image 5"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--6">
               <img
-                src="img/12.jpeg"
+                src="img/12.webp"
                 alt="gallery image 6"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--7">
               <img
-                src="img/7.jpeg"
+                src="img/7.webp"
                 alt="gallery image 7"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--8">
               <img
-                src="img/10.jpg"
+                src="img/10.webp"
                 alt="gallery image 8"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--9">
               <img
-                src="img/9.jpeg"
+                src="img/9.webp"
                 alt="gallery image 9"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--10">
               <img
-                src="img/2.jpg"
+                src="img/2.webp"
                 alt="gallery image 10"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--11">
               <img
-                src="img/11.jpeg"
+                src="img/11.webp"
                 alt="gallery image 11"
                 class="gallery__image"
               />
             </div>
             <div class="gallery__item gallery__item--12">
               <img
-                src="img/6.jpg"
+                src="img/6.webp"
                 alt="gallery image 12"
                 class="gallery__image"
               />
@@ -313,31 +339,5 @@
         </p>
       </footer>
     </div>
-    <script>
-      // toggle navigation
-      const nav = document.querySelector("#navigation");
-      const btn = document.querySelector("#navigation-btn");
-      btn.addEventListener("click", (evt) => {
-        nav.classList.toggle("active");
-      });
-
-      // Implement smooth scrolling
-      nav.addEventListener("click", (evt) => {
-        evt.preventDefault();
-        const link = evt.target.closest(".header__link");
-        if (!evt) return;
-        const targetSection = document.querySelector(link.getAttribute("href"));
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      });
-
-      const messageMeBtn = document.querySelector(".btn--messageMe");
-      messageMeBtn.addEventListener("click", (evt) => {
-        evt.preventDefault();
-        const targetSection = document.querySelector(
-          evt.target.getAttribute("href")
-        );
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      });
-    </script>
   </body>
 </html>

@@ -36,6 +36,9 @@ body {
 img {
   width: 100%; }
 
+.lazy-image {
+  filter: blur(12px); }
+
 @font-face {
   font-family: "Montserrat";
   src: url("fonts/Montserrat-Regular.ttf"); }
@@ -499,7 +502,7 @@ footer {
   padding: 3rem; }
 
 .contact__image {
-  background: linear-gradient(to right, #c29e5b, rgba(194, 158, 91, 0.5)), url(../img/contact.jpeg) 50% 40%/cover;
+  background: linear-gradient(to right, #c29e5b, rgba(194, 158, 91, 0.5)), url(../img/contact.webp) 50% 40%/cover;
   height: 100%; }
   @media only screen and (max-width: 37.5em) {
     .contact__image {
