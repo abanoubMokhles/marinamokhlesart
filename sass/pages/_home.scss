@@ -1,5 +1,5 @@
 .header {
-  padding: 2rem 0 0;
+  padding: 2rem 0 16rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,6 +132,10 @@
   }
   &__image {
     width: 40%;
+
+    @include respond(phone) {
+      width: 90%;
+    }
   }
   &__link {
     display: inline-block;
@@ -165,6 +169,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 6rem;
+  transition: all 1s ease-out;
 
   @include respond(tabletLandscape) {
     grid-template-columns: 2fr 3fr;
@@ -179,6 +184,7 @@
 
 .section-how-it-works {
   padding: 16rem 0;
+  transition: all 1s ease-out;
 }
 .section-slider {
   padding: 16rem 0;
@@ -186,6 +192,7 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 6rem;
   align-items: center;
+  transition: all 1s ease-out;
 
   @include respond(phone) {
     grid-template-columns: 1fr;
@@ -199,12 +206,14 @@
 }
 .section-gallery {
   padding: 16rem 0;
+  transition: all 1s ease-out;
 }
 .section-contact {
   background-color: var(--color-primary);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   border-radius: 1.5rem;
   overflow: hidden;
+  transition: all 1s ease-out;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -241,6 +250,7 @@
   align-items: center;
   flex-direction: column;
   gap: 4rem;
+  transition: all 1s ease-out;
   &__list {
     list-style-type: none;
     display: flex;

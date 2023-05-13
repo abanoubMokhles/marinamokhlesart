@@ -29,3 +29,7 @@ img {
 .lazy-image {
   filter: blur(12px);
 }
+.section-hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}

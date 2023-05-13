@@ -58,7 +58,7 @@
 
       <!-- About Me -->
       <main role="main">
-        <section class="section-aboutme" id="about">
+        <section class="section-aboutme section-hidden" id="about">
           <div>
             <h2>About me</h2>
             <p>
@@ -100,7 +100,7 @@
         </section>
 
         <!-- How It Works -->
-        <section class="section-how-it-works">
+        <section class="section-how-it-works section-hidden">
           <div class="steps">
             <div class="step">
               <svg class="step__icon">
@@ -133,29 +133,27 @@
         </section>
 
         <!-- Slider -->
-        <section class="section-slider">
+        <section class="section-slider section-hidden">
           <div class="slider">
             <div class="slider__slides">
               <div class="slider__slide">
                 <img
-                  src="img/slide1-small.webp"
-                  data-src="img/slide1.webp"
+                  src="img/slide1.webp"
                   alt="slider temp image"
-                  class="slider__image lazy-image"
+                  class="slider__image"
                 />
               </div>
-              <div class="slide">
+              <div class="slider__slide">
                 <img
-                  src="img/slide2-small.webp"
-                  data-src="img/slide2.webp"
+                  src="img/slide22.webp"
                   alt="slider temp image"
-                  class="slider__image lazy-image"
+                  class="slider__image"
                 />
               </div>
             </div>
             <div class="slider__controls">
-              <button class="slider__btn slide__btn--left">&larr;</button>
-              <button class="slider__btn slide__btn--right">&rarr;</button>
+              <button class="slider__btn slider__btn--left">&larr;</button>
+              <button class="slider__btn slider__btn--right">&rarr;</button>
             </div>
             <div class="slider__dots"></div>
           </div>
@@ -169,7 +167,7 @@
         </section>
 
         <!-- Gallery -->
-        <section class="section-gallery" id="portfolio">
+        <section class="section-gallery section-hidden" id="portfolio">
           <div class="gallery">
             <div class="gallery__item gallery__item--1">
               <img
@@ -259,7 +257,7 @@
         </section>
 
         <!-- Contact me -->
-        <section class="section-contact" id="messageMe">
+        <section class="section-contact section-hidden" id="messageMe">
           <div class="contact__text">
             <h2 class="heading-secondary--light">Let's get in touch</h2>
             <form
@@ -311,21 +309,20 @@
       <footer role="contentinfo" class="footer" id="contact">
         <ul class="footer__list">
           <li>
-            <a href="#" class="footer__link">
-              <svg class="footer__icon">
-                <use xlink:href="img/icons/symbol-defs.svg#icon-whatsapp"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__link">
+            <a
+              href="https://www.facebook.com/profile.php?id=100083994283299"
+              class="footer__link"
+            >
               <svg class="footer__icon">
                 <use xlink:href="img/icons/symbol-defs.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#" class="footer__link">
+            <a
+              href="https://www.instagram.com/marinamokhles.art"
+              class="footer__link"
+            >
               <svg class="footer__icon">
                 <use
                   xlink:href="img/icons/symbol-defs.svg#icon-instagram"
@@ -335,7 +332,7 @@
           </li>
         </ul>
         <p class="footer__copyright">
-          &copy; 2023 by <a href="#">Abanoub Mokhles</a>
+          &copy; 2023 by <a href="https://abanoub.tech">Abanoub Mokhles</a>
         </p>
       </footer>
     </div>
